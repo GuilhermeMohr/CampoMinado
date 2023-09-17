@@ -104,8 +104,7 @@ while(True):
     for coluna in mapa["display"]:
         for ponto in coluna:
             print(ponto, end='')
-        print()    
-    print(mapa["vazio"])
+        print()
 
     x = 0
     y = 0
