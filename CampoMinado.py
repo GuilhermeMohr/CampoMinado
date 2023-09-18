@@ -101,9 +101,17 @@ while(True):
         break;
 
     os.system("cls")
+    i = 1
+    print("  1 2 3 4 5 6 7 8 9 10")
     for coluna in mapa["display"]:
+        if  i == 10:
+            print(f"{i}", end='')
+        else:
+            print(f"{i} ", end='')
+        i+=1
         for ponto in coluna:
             print(ponto, end='')
+            print(" ", end='')
         print()
 
     x = 0
