@@ -1,6 +1,8 @@
 import EditorMapa
 import os
 
+from colorama import Fore, Back, Style
+
 mapa = {"arquivo":open("map.txt", 'r'), 'x':0, 'y':0, "coordenadas":[], "display":[], "vazio":0}
 
 def inicializar():
@@ -117,9 +119,9 @@ while(True):
     x = 0
     y = 0
     while(True):
-        print("x:")
+        print("x:", end='')
         x = int(input()) -1
-        print("y:")
+        print("y:", end='')
         y = int(input()) -1
      
         if x < mapa['x'] and y < mapa['y'] and x >= 0 and y >= 0:
@@ -136,16 +138,17 @@ while(True):
         
 os.system("cls")
 if win:
-    print("_____.___.               __      __                    ")
-    print("\\__  |   | ____  __ __  /  \\    /  \\____   ____     ")
-    print(" /   |   |/  _ \\|  |  \\ \\   \\/\\/   /  _ \\ /    \\    ")
-    print(" \\____   (  <_> )  |  /  \\        (  <_> )   |  \\ ")
-    print(" / ______|\\____/|____/    \\__/\\  / \\____/|___|  /  ")
-    print(" \\/                            \\/             \\/    ")
+    print(Fore.GREEN + "_____.___.               __      __                    ")
+    print(Fore.GREEN + "\\__  |   | ____  __ __  /  \\    /  \\____   ____     ")
+    print(Fore.GREEN + " /   |   |/  _ \\|  |  \\ \\   \\/\\/   /  _ \\ /    \\    ")
+    print(Fore.GREEN + " \\____   (  <_> )  |  /  \\        (  <_> )   |  \\ ")
+    print(Fore.GREEN + " / ______|\\____/|____/    \\__/\\  / \\____/|___|  /  ")
+    print(Fore.GREEN + " \\/                            \\/             \\/    ")
 else:
-    print("  ________                        ________                         ")
-    print(" / _____ / _____    _____   ____   \\_____  \\___   __ ___________ ")
-    print("/   \\  ___\\__   \\  /     \\_/ __ \\   /   |   \\  \\ / // __ \\_  __ \\     ")
-    print("\\    \\_\\  \\/ __  \\|  Y Y  \\  ___/  /    |    \\    /\\  ___/|  | \\/")
-    print(" \\______  (____  / __|_|  /\__  >  \______  / \\_ /  \\___  >__|    ")
-    print("        \\/     \\/       \\/    \\/          \\/           \\/        ")
+    print(Fore.RED + "  ________                        ________                         ")
+    print(Fore.RED + " / _____ / _____    _____   ____   \\_____  \\___   __ ___________ ")
+    print(Fore.RED + "/   \\  ___\\__   \\  /     \\_/ __ \\   /   |   \\  \\ / // __ \\_  __ \\     ")
+    print(Fore.RED + "\\    \\_\\  \\/ __  \\|  Y Y  \\  ___/  /    |    \\    /\\  ___/|  | \\/")
+    print(Fore.RED + " \\______  (____  / __|_|  /\__  >  \______  / \\_ /  \\___  >__|    ")
+    print(Fore.RED + "        \\/     \\/       \\/    \\/          \\/           \\/        ")
+print(Fore.RESET + "")
